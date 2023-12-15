@@ -1,0 +1,40 @@
+{
+  "name": "rush-hour",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "eslint": "^8.56.0",
+    "expo": "~49.0.15",
+    "expo-contacts": "^12.4.0",
+    "expo-status-bar": "~1.6.0",
+    "husky": "4",
+    "prettier": "^3.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.72.6",
+    "react-native-contacts": "^7.0.8",
+    "react-native-phone-call": "^1.2.0",
+    "react-native-web": "~0.19.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "eslint-plugin-prettier": "5.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "private": true
+}
